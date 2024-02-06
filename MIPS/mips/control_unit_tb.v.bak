@@ -1,0 +1,98 @@
+module control_unit_tb;
+
+    reg [5:0] opcode;
+    wire regDst, branch, memRead, memWrite, ALUsrc, regWrite, jump, byteOperations, move;
+    wire [2:0] ALUop;
+
+    // Instantiate the control_unit module
+    control_unit uut (
+        .regDst(regDst),
+        .branch(branch),
+        .memRead(memRead),
+        .memWrite(memWrite),
+        .ALUop(ALUop),
+        .ALUsrc(ALUsrc),
+        .regWrite(regWrite),
+        .jump(jump),
+        .byteOperations(byteOperations),
+        .move(move),
+        .opcode(opcode)
+    );
+
+    // Stimulus generation
+    initial begin
+        // Test case 1: R-Type instruction (e.g., ADD)
+        opcode = 6'b000000;
+        #10;
+        $display("Test Case r type, add: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+
+        // Test case 2: I-Type instruction (e.g., ADDI)
+        opcode = 6'b000010;
+        #10;
+        $display("Test Case addi: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+			
+			//subi
+        opcode = 6'b000011;
+        #10;
+        $display("Test Case subi: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+			
+			//andi
+			opcode = 6'b000100;
+        #10;
+        $display("Test Case andi: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+        
+		  //ori
+		  opcode = 6'b000101;
+        #10;
+        $display("Test Case ori: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+		  
+		  //lw
+		  opcode = 6'b001000;
+        #10;
+        $display("Test Case lw: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+		  
+		  //sw
+		  opcode = 6'b010000;
+        #10;
+        $display("Test Case sw: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+		  
+		  //lb
+		  opcode = 6'b001001;
+        #10;
+        $display("Test Case lb: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+		  
+		  //sb
+		  opcode = 6'b010001;
+        #10;
+        $display("Test Case sb: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+		  
+		  //slti
+		  opcode = 6'b000111;
+        #10;
+        $display("Test Case slti: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+		  
+		  //beq
+		  opcode = 6'b100011;
+        #10;
+        $display("Test Case beq: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+		  
+		  //bne
+		  opcode = 6'b100111;
+        #10;
+        $display("Test Case bne: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+		  
+		  //j
+		  opcode = 6'b111000;
+        #10;
+        $display("Test Case j: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+		  
+		  //jal
+		  opcode = 6'b111001;
+        #10;
+        $display("Test Case jal: regDst = %b, branch = %b, memRead = %b, memWrite = %b, ALUop = %b, ALUsrc = %b, regWrite = %b, jump = %b, byteOperations = %b, move = %b", regDst, branch, memRead, memWrite, ALUop, ALUsrc, regWrite, jump, byteOperations, move);
+		  
+		  // End simulation
+        $finish;
+    end
+
+endmodule

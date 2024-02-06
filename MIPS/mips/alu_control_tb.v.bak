@@ -1,0 +1,52 @@
+module alu_control_tb;
+
+    reg [5:0] function_code;
+    reg [2:0] ALUop;
+    wire [2:0] alu_ctr;
+
+    // Instantiate the alu_control module
+    alu_control uut (
+        .alu_ctr(alu_ctr),
+        .function_code(function_code),
+        .ALUop(ALUop)
+    );
+
+    // Stimulus generation
+    initial begin
+        // Test case 1: R-Type instruction (ADD)
+        function_code = 6'b100000;
+        ALUop = 3'b111;
+        #10;
+        $display("Test Case 1: alu_ctr = %b", alu_ctr);
+
+        // Test case 2: I-Type instruction (ADDI)
+        function_code = 6'b001000;
+        ALUop = 3'b000;
+        #10;
+        $display("Test Case 2: alu_ctr = %b", alu_ctr);
+
+        // Test case 3: I-Type instruction (ANDI)
+        function_code = 6'b001100;
+        ALUop = 3'b000;
+        #10;
+        $display("Test Case 3: alu_ctr = %b", alu_ctr);
+
+        // Test case 4: I-Type instruction (ORI)
+        function_code = 6'b001101;
+        ALUop = 3'b000;
+        #10;
+        $display("Test Case 4: alu_ctr = %b", alu_ctr);
+
+        // Test case 5: R-Type instruction (SUB)
+        function_code = 6'b100010;
+        ALUop = 3'b111;
+        #10;
+        $display("Test Case 5: alu_ctr = %b", alu_ctr);
+
+        // Add more test cases as needed...
+
+        // End simulation
+        $finish;
+    end
+
+endmodule

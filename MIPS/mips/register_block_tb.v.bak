@@ -1,0 +1,56 @@
+`timescale 1ns/1ps
+
+module register_block_tb;
+
+    // Parameters
+    parameter WAIT_TIME = 10;
+
+    // Inputs and outputs
+    reg byteOperations;
+    reg [31:0] write_data;
+    reg [4:0] read_reg1, read_reg2, write_reg;
+    reg regWrite;
+    wire [31:0] read_data1, read_data2;
+
+    // Instantiate the register_block module
+    register_block uut (
+        .byteOperations(byteOperations),
+        .write_data(write_data),
+        .read_reg1(read_reg1),
+        .read_reg2(read_reg2),
+        .write_reg(write_reg),
+        .regWrite(regWrite),
+        .read_data1(read_data1),
+        .read_data2(read_data2)
+    );
+
+    // Initial block to apply inputs
+    initial begin
+        // Apply initial values
+        byteOperations = 0;
+        write_data = 32'h12345678;
+        read_reg1 = 5;
+        read_reg2 = 10;
+        write_reg = 3;
+        regWrite = 0;
+
+        // Wait for a few time units
+        #WAIT_TIME;
+
+        // Change inputs
+        regWrite = 1;
+
+        // Wait for a few time units
+        #WAIT_TIME;
+
+        // Change inputs
+        write_data = 32'hABCDEFFF;
+
+        // Wait for a few time units
+        #WAIT_TIME;
+
+        // Finish simulation
+        $finish;
+    end
+
+endmodule

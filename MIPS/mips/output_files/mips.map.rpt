@@ -1,0 +1,892 @@
+Analysis & Synthesis report for mips
+Fri Jan 19 18:40:29 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |mips|alu:aluu|mod:mod1|mod_cu:mod1|next_state
+  9. State Machine - |mips|alu:aluu|mod:mod1|mod_cu:mod1|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Parameter Settings for User Entity Instance: alu:aluu|mod:mod1|mod_cu:mod1
+ 14. Port Connectivity Checks: "cla_level2_32bit:branch_adder"
+ 15. Port Connectivity Checks: "alu:aluu|mod:mod1|mod_cu:mod1|mod_dp:mod1|cla_level2_32bit:substract2"
+ 16. Port Connectivity Checks: "alu:aluu|mod:mod1|mod_cu:mod1|mod_dp:mod1|cla_level2_32bit:substract1"
+ 17. Port Connectivity Checks: "alu:aluu|mod:mod1|mod_cu:mod1|mod_dp:mod1|cla_level2_32bit:twos_complement"
+ 18. Port Connectivity Checks: "alu:aluu|mod:mod1|mod_cu:mod1|mod_dp:mod1|xor_32bit:ones_complement"
+ 19. Port Connectivity Checks: "alu:aluu|cla_level2_32bit:adder32"
+ 20. Port Connectivity Checks: "alu:aluu|cla_level2_32bit:lessthan"
+ 21. Port Connectivity Checks: "alu:aluu|cla_level2_32bit:substract"
+ 22. Port Connectivity Checks: "alu:aluu|cla_level2_32bit:twos_complement"
+ 23. Port Connectivity Checks: "alu:aluu|xor_32bit:ones_complement"
+ 24. Port Connectivity Checks: "sign_extend:sign_ext|or_16bit:or16bit"
+ 25. Port Connectivity Checks: "mux_5bit:regDst_mux2"
+ 26. Port Connectivity Checks: "control_unit:cu"
+ 27. Port Connectivity Checks: "cla_level2_32bit:pc_adder|cla_16bit:cla2"
+ 28. Port Connectivity Checks: "cla_level2_32bit:pc_adder"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
+ 32. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Jan 19 18:40:29 2024       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; mips                                        ;
+; Top-level Entity Name           ; mips                                        ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 1                                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; mips               ; mips               ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+; cla_level2_32bit.v               ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/cla_level2_32bit.v  ;         ;
+; cla_level1_8bit.v                ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/cla_level1_8bit.v   ;         ;
+; and_4bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/and_4bit.v          ;         ;
+; and_8bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/and_8bit.v          ;         ;
+; and_16bit.v                      ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/and_16bit.v         ;         ;
+; and_32bit.v                      ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/and_32bit.v         ;         ;
+; or_4bit.v                        ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/or_4bit.v           ;         ;
+; or_8bit.v                        ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/or_8bit.v           ;         ;
+; or_16bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/or_16bit.v          ;         ;
+; or_32bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/or_32bit.v          ;         ;
+; xor_4bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/xor_4bit.v          ;         ;
+; xor_8bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/xor_8bit.v          ;         ;
+; xor_16bit.v                      ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/xor_16bit.v         ;         ;
+; xor_32bit.v                      ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/xor_32bit.v         ;         ;
+; nor_4bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/nor_4bit.v          ;         ;
+; nor_8bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/nor_8bit.v          ;         ;
+; nor_16bit.v                      ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/nor_16bit.v         ;         ;
+; nor_32bit.v                      ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/nor_32bit.v         ;         ;
+; mux_2x1.v                        ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/mux_2x1.v           ;         ;
+; mux_8x1.v                        ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/mux_8x1.v           ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/alu.v               ;         ;
+; register_block.v                 ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/register_block.v    ;         ;
+; instruction_block.v              ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/instruction_block.v ;         ;
+; memory_block.v                   ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/memory_block.v      ;         ;
+; control_unit.v                   ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/control_unit.v      ;         ;
+; alu_control.v                    ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/alu_control.v       ;         ;
+; sign_extend.v                    ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/sign_extend.v       ;         ;
+; shift_left_2.v                   ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/shift_left_2.v      ;         ;
+; mips.v                           ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/mips.v              ;         ;
+; mod_cu.v                         ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/mod_cu.v            ;         ;
+; mod.v                            ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/mod.v               ;         ;
+; mod_dp.v                         ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/mod_dp.v            ;         ;
+; mux_5bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/mux_5bit.v          ;         ;
+; and_5bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/and_5bit.v          ;         ;
+; or_5bit.v                        ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/or_5bit.v           ;         ;
+; concat.v                         ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/concat.v            ;         ;
+; shift_left_2_jump.v              ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/shift_left_2_jump.v ;         ;
+; registers.mem                    ; yes             ; User Unspecified File  ; C:/Users/serdar/Desktop/mips/registers.mem       ;         ;
+; instructions.mem                 ; yes             ; User Unspecified File  ; C:/Users/serdar/Desktop/mips/instructions.mem    ;         ;
+; memory.mem                       ; yes             ; User Unspecified File  ; C:/Users/serdar/Desktop/mips/memory.mem          ;         ;
+; cla_4bit.v                       ; yes             ; User Verilog HDL File  ; C:/Users/serdar/Desktop/mips/cla_4bit.v          ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 1     ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clock ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 1     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |mips                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 1    ; 0            ; |mips               ; mips        ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------+
+; State Machine - |mips|alu:aluu|mod:mod1|mod_cu:mod1|next_state                              ;
++--------------------------+-----------------+--------------------------+---------------------+
+; Name                     ; next_state.IDLE ; next_state.OUTPUT_RESULT ; next_state.SUBTRACT ;
++--------------------------+-----------------+--------------------------+---------------------+
+; next_state.IDLE          ; 0               ; 0                        ; 0                   ;
+; next_state.SUBTRACT      ; 1               ; 0                        ; 1                   ;
+; next_state.OUTPUT_RESULT ; 1               ; 1                        ; 0                   ;
++--------------------------+-----------------+--------------------------+---------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------+
+; State Machine - |mips|alu:aluu|mod:mod1|mod_cu:mod1|state               ;
++---------------------+------------+---------------------+----------------+
+; Name                ; state.IDLE ; state.OUTPUT_RESULT ; state.SUBTRACT ;
++---------------------+------------+---------------------+----------------+
+; state.IDLE          ; 0          ; 0                   ; 0              ;
+; state.SUBTRACT      ; 1          ; 0                   ; 1              ;
+; state.OUTPUT_RESULT ; 1          ; 1                   ; 0              ;
++---------------------+------------+---------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                   ;
++--------------------------------------------------------+---------------------------------------------+
+; Register name                                          ; Reason for Removal                          ;
++--------------------------------------------------------+---------------------------------------------+
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[0..31]            ; Stuck at GND due to stuck port clock        ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_a[0..31]            ; Stuck at GND due to stuck port clock        ;
+; alu:aluu|mod:mod1|mod_cu:mod1|temp[0..31]              ; Stuck at GND due to stuck port clock_enable ;
+; pc[0..6]                                               ; Lost fanout                                 ;
+; alu:aluu|mod:mod1|mod_cu:mod1|state.IDLE               ; Lost fanout                                 ;
+; alu:aluu|mod:mod1|mod_cu:mod1|state.SUBTRACT           ; Lost fanout                                 ;
+; alu:aluu|mod:mod1|mod_cu:mod1|state.OUTPUT_RESULT      ; Lost fanout                                 ;
+; alu:aluu|mod:mod1|mod_cu:mod1|next_state.SUBTRACT      ; Stuck at GND due to stuck port clock        ;
+; alu:aluu|mod:mod1|mod_cu:mod1|next_state.OUTPUT_RESULT ; Stuck at GND due to stuck port clock        ;
+; alu:aluu|mod:mod1|mod_cu:mod1|next_state.IDLE          ; Stuck at GND due to stuck port clock        ;
+; Total Number of Removed Registers = 109                ;                                             ;
++--------------------------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                         ;
++------------------------------------------+-------------------------+--------------------------------------------------------------------------------+
+; Register name                            ; Reason for Removal      ; Registers Removed due to This Register                                         ;
++------------------------------------------+-------------------------+--------------------------------------------------------------------------------+
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_a[0]  ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[0], alu:aluu|mod:mod1|mod_cu:mod1|temp[4],  ;
+;                                          ; due to stuck port clock ; alu:aluu|mod:mod1|mod_cu:mod1|temp[8], pc[5]                                   ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_a[2]  ; Stuck at GND            ; pc[2], pc[3], pc[4]                                                            ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[10] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[10], pc[6]                                  ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_a[16] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[20], alu:aluu|mod:mod1|mod_cu:mod1|temp[24] ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[9]  ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[9]                                          ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[7]  ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[7]                                          ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[6]  ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[6]                                          ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[5]  ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[5]                                          ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[3]  ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[3]                                          ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[2]  ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[2]                                          ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[1]  ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[1]                                          ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[11] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[11]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[12] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[13]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[13] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[14]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[15] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[15]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[16] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[17]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[17] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[18]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[19] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[19]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[20] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[21]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[21] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[22]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[23] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[23]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[24] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[25]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[25] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[26]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[27] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[27]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[28] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[29]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[29] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[30]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_b[31] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[31]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_a[8]  ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[12]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_a[15] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[16]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
+; alu:aluu|mod:mod1|mod_cu:mod1|mod1_a[24] ; Stuck at GND            ; alu:aluu|mod:mod1|mod_cu:mod1|temp[28]                                         ;
+;                                          ; due to stuck port clock ;                                                                                ;
++------------------------------------------+-------------------------+--------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu:aluu|mod:mod1|mod_cu:mod1 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; IDLE           ; 00    ; Unsigned Binary                                   ;
+; SUBTRACT       ; 01    ; Unsigned Binary                                   ;
+; OUTPUT_RESULT  ; 10    ; Unsigned Binary                                   ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "cla_level2_32bit:branch_adder" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; c_in ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:aluu|mod:mod1|mod_cu:mod1|mod_dp:mod1|cla_level2_32bit:substract2"                    ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; sum[30..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; c_in       ; Input  ; Info     ; Stuck at GND                                                                        ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:aluu|mod:mod1|mod_cu:mod1|mod_dp:mod1|cla_level2_32bit:substract1" ;
++------+-------+----------+-------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                 ;
++------+-------+----------+-------------------------------------------------------------------------+
+; c_in ; Input ; Info     ; Stuck at GND                                                            ;
++------+-------+----------+-------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:aluu|mod:mod1|mod_cu:mod1|mod_dp:mod1|cla_level2_32bit:twos_complement" ;
++----------+-------+----------+--------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                  ;
++----------+-------+----------+--------------------------------------------------------------------------+
+; b[31..1] ; Input ; Info     ; Stuck at GND                                                             ;
+; b[0]     ; Input ; Info     ; Stuck at VCC                                                             ;
+; c_in     ; Input ; Info     ; Stuck at GND                                                             ;
++----------+-------+----------+--------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:aluu|mod:mod1|mod_cu:mod1|mod_dp:mod1|xor_32bit:ones_complement" ;
++------+-------+----------+-----------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                               ;
++------+-------+----------+-----------------------------------------------------------------------+
+; in2  ; Input ; Info     ; Stuck at VCC                                                          ;
++------+-------+----------+-----------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "alu:aluu|cla_level2_32bit:adder32" ;
++------+-------+----------+-------------------------------------+
+; Port ; Type  ; Severity ; Details                             ;
++------+-------+----------+-------------------------------------+
+; c_in ; Input ; Info     ; Stuck at GND                        ;
++------+-------+----------+-------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "alu:aluu|cla_level2_32bit:lessthan" ;
++------+-------+----------+--------------------------------------+
+; Port ; Type  ; Severity ; Details                              ;
++------+-------+----------+--------------------------------------+
+; a    ; Input ; Info     ; Stuck at GND                         ;
+; b    ; Input ; Info     ; Stuck at GND                         ;
++------+-------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "alu:aluu|cla_level2_32bit:substract" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; c_in ; Input ; Info     ; Stuck at GND                          ;
++------+-------+----------+---------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:aluu|cla_level2_32bit:twos_complement" ;
++----------+-------+----------+-----------------------------------------+
+; Port     ; Type  ; Severity ; Details                                 ;
++----------+-------+----------+-----------------------------------------+
+; b[31..1] ; Input ; Info     ; Stuck at GND                            ;
+; b[0]     ; Input ; Info     ; Stuck at VCC                            ;
+; c_in     ; Input ; Info     ; Stuck at GND                            ;
++----------+-------+----------+-----------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "alu:aluu|xor_32bit:ones_complement" ;
++------+-------+----------+--------------------------------------+
+; Port ; Type  ; Severity ; Details                              ;
++------+-------+----------+--------------------------------------+
+; in2  ; Input ; Info     ; Stuck at VCC                         ;
++------+-------+----------+--------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "sign_extend:sign_ext|or_16bit:or16bit" ;
++------+-------+----------+-----------------------------------------+
+; Port ; Type  ; Severity ; Details                                 ;
++------+-------+----------+-----------------------------------------+
+; in2  ; Input ; Info     ; Stuck at GND                            ;
++------+-------+----------+-----------------------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "mux_5bit:regDst_mux2" ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; b    ; Input ; Info     ; Stuck at VCC           ;
++------+-------+----------+------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "control_unit:cu"                                                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; move ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "cla_level2_32bit:pc_adder|cla_16bit:cla2"                                            ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "cla_level2_32bit:pc_adder" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; a[31..3] ; Input ; Info     ; Stuck at GND            ;
+; a[1..0]  ; Input ; Info     ; Stuck at GND            ;
+; a[2]     ; Input ; Info     ; Stuck at VCC            ;
+; c_in     ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 1                               ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Jan 19 18:40:23 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c mips
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file cla_level2_32bit.v
+    Info (12023): Found entity 1: cla_level2_32bit File: C:/Users/serdar/Desktop/mips/cla_level2_32bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cla_level1_8bit.v
+    Info (12023): Found entity 1: cla_16bit File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file and_4bit.v
+    Info (12023): Found entity 1: and_4bit File: C:/Users/serdar/Desktop/mips/and_4bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file and_8bit.v
+    Info (12023): Found entity 1: and_8bit File: C:/Users/serdar/Desktop/mips/and_8bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file and_16bit.v
+    Info (12023): Found entity 1: and_16bit File: C:/Users/serdar/Desktop/mips/and_16bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file and_32bit.v
+    Info (12023): Found entity 1: and_32bit File: C:/Users/serdar/Desktop/mips/and_32bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file or_4bit.v
+    Info (12023): Found entity 1: or_4bit File: C:/Users/serdar/Desktop/mips/or_4bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file or_8bit.v
+    Info (12023): Found entity 1: or_8bit File: C:/Users/serdar/Desktop/mips/or_8bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file or_16bit.v
+    Info (12023): Found entity 1: or_16bit File: C:/Users/serdar/Desktop/mips/or_16bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file or_32bit.v
+    Info (12023): Found entity 1: or_32bit File: C:/Users/serdar/Desktop/mips/or_32bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file xor_4bit.v
+    Info (12023): Found entity 1: xor_4bit File: C:/Users/serdar/Desktop/mips/xor_4bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file xor_8bit.v
+    Info (12023): Found entity 1: xor_8bit File: C:/Users/serdar/Desktop/mips/xor_8bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file xor_16bit.v
+    Info (12023): Found entity 1: xor_16bit File: C:/Users/serdar/Desktop/mips/xor_16bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file xor_32bit.v
+    Info (12023): Found entity 1: xor_32bit File: C:/Users/serdar/Desktop/mips/xor_32bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file nor_4bit.v
+    Info (12023): Found entity 1: nor_4bit File: C:/Users/serdar/Desktop/mips/nor_4bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file nor_8bit.v
+    Info (12023): Found entity 1: nor_8bit File: C:/Users/serdar/Desktop/mips/nor_8bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file nor_16bit.v
+    Info (12023): Found entity 1: nor_16bit File: C:/Users/serdar/Desktop/mips/nor_16bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file nor_32bit.v
+    Info (12023): Found entity 1: nor_32bit File: C:/Users/serdar/Desktop/mips/nor_32bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2x1.v
+    Info (12023): Found entity 1: mux_2x1 File: C:/Users/serdar/Desktop/mips/mux_2x1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_8x1.v
+    Info (12023): Found entity 1: mux_8x1 File: C:/Users/serdar/Desktop/mips/mux_8x1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: alu File: C:/Users/serdar/Desktop/mips/alu.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register_block.v
+    Info (12023): Found entity 1: register_block File: C:/Users/serdar/Desktop/mips/register_block.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_block.v
+    Info (12023): Found entity 1: instruction_block File: C:/Users/serdar/Desktop/mips/instruction_block.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memory_block.v
+    Info (12023): Found entity 1: memory_block File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file control_unit.v
+    Info (12023): Found entity 1: control_unit File: C:/Users/serdar/Desktop/mips/control_unit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_control.v
+    Info (12023): Found entity 1: alu_control File: C:/Users/serdar/Desktop/mips/alu_control.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sign_extend.v
+    Info (12023): Found entity 1: sign_extend File: C:/Users/serdar/Desktop/mips/sign_extend.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift_left_2.v
+    Info (12023): Found entity 1: shift_left_2 File: C:/Users/serdar/Desktop/mips/shift_left_2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mips.v
+    Info (12023): Found entity 1: mips File: C:/Users/serdar/Desktop/mips/mips.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mod_cu.v
+    Info (12023): Found entity 1: mod_cu File: C:/Users/serdar/Desktop/mips/mod_cu.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mod.v
+    Info (12023): Found entity 1: mod File: C:/Users/serdar/Desktop/mips/mod.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mod_dp.v
+    Info (12023): Found entity 1: mod_dp File: C:/Users/serdar/Desktop/mips/mod_dp.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register_block_tb.v
+    Info (12023): Found entity 1: register_block_tb File: C:/Users/serdar/Desktop/mips/register_block_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_5bit.v
+    Info (12023): Found entity 1: mux_5bit File: C:/Users/serdar/Desktop/mips/mux_5bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file and_5bit.v
+    Info (12023): Found entity 1: and_5bit File: C:/Users/serdar/Desktop/mips/and_5bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file or_5bit.v
+    Info (12023): Found entity 1: or_5bit File: C:/Users/serdar/Desktop/mips/or_5bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mips_tb.v
+    Info (12023): Found entity 1: mips_tb File: C:/Users/serdar/Desktop/mips/mips_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file concat.v
+    Info (12023): Found entity 1: concat File: C:/Users/serdar/Desktop/mips/concat.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memory_block_tb.v
+    Info (12023): Found entity 1: memory_block_tb File: C:/Users/serdar/Desktop/mips/memory_block_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file concat_tb.v
+    Info (12023): Found entity 1: concat_tb File: C:/Users/serdar/Desktop/mips/concat_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift_left_2_tb.v
+    Info (12023): Found entity 1: shift_left_2_tb File: C:/Users/serdar/Desktop/mips/shift_left_2_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file control_unit_tb.v
+    Info (12023): Found entity 1: control_unit_tb File: C:/Users/serdar/Desktop/mips/control_unit_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_control_tb.v
+    Info (12023): Found entity 1: alu_control_tb File: C:/Users/serdar/Desktop/mips/alu_control_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shift_left_2_jump.v
+    Info (12023): Found entity 1: shift_left_2_jump File: C:/Users/serdar/Desktop/mips/shift_left_2_jump.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.v
+    Info (12023): Found entity 1: alu_tb File: C:/Users/serdar/Desktop/mips/alu_tb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cla_4bit.v
+    Info (12023): Found entity 1: cla_4bit File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(7): created implicit net for "p0_and_c0" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(12): created implicit net for "p1_and_p0_and_c0" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(13): created implicit net for "p1_and_g0" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(14): created implicit net for "p1_and_p0_and_c0_or_p1_and_g0" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(20): created implicit net for "p1_and_p0_and_c0_and_p2" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(21): created implicit net for "p1_and_g0_and_p2" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(22): created implicit net for "g1_and_p2" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(23): created implicit net for "p1_and_g0_and_p2_or_p1_and_g0_and_p2" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(24): created implicit net for "g1_and_p2_or_p1_and_g0_and_p2_or_p1_and_g0_and_p2" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(30): created implicit net for "p1_and_p0_and_c0_and_p2_and_p3" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(31): created implicit net for "p1_and_g0_and_p2_and_p3" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 31
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(32): created implicit net for "g1_and_p2_and_p3" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 32
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(33): created implicit net for "p3_and_g2" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(34): created implicit net for "p1_and_p0_and_c0_and_p2_and_p3_or_p1_and_g0_and_p2_and_p3" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(35): created implicit net for "g1_and_p2_and_p3_or_p1_and_p0_and_c0_and_p2_and_p3_or_p1_and_g0_and_p2_and_p3" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 35
+Warning (10236): Verilog HDL Implicit Net warning at cla_level1_8bit.v(36): created implicit net for "g1_and_p2_and_p3_or_p1_and_p0_and_c0_and_p2_and_p3_or_p1_and_g0_and_p2_and_p3_or_p3_and_g2" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at mux_2x1.v(46): created implicit net for "s0_" File: C:/Users/serdar/Desktop/mips/mux_2x1.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at alu_control.v(11): created implicit net for "and1_result" File: C:/Users/serdar/Desktop/mips/alu_control.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at alu_control.v(16): created implicit net for "and3_result" File: C:/Users/serdar/Desktop/mips/alu_control.v Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at alu_control.v(17): created implicit net for "and4_result" File: C:/Users/serdar/Desktop/mips/alu_control.v Line: 17
+Warning (10236): Verilog HDL Implicit Net warning at alu_control.v(22): created implicit net for "and9_result" File: C:/Users/serdar/Desktop/mips/alu_control.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at alu_control.v(23): created implicit net for "and5_result" File: C:/Users/serdar/Desktop/mips/alu_control.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at alu_control.v(24): created implicit net for "and6_result" File: C:/Users/serdar/Desktop/mips/alu_control.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at alu_control.v(28): created implicit net for "xor_result" File: C:/Users/serdar/Desktop/mips/alu_control.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at alu_control.v(29): created implicit net for "and7_result" File: C:/Users/serdar/Desktop/mips/alu_control.v Line: 29
+Warning (10236): Verilog HDL Implicit Net warning at alu_control.v(30): created implicit net for "and8_result" File: C:/Users/serdar/Desktop/mips/alu_control.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at mips.v(7): created implicit net for "canWrite" File: C:/Users/serdar/Desktop/mips/mips.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at mux_5bit.v(20): created implicit net for "s0_" File: C:/Users/serdar/Desktop/mips/mux_5bit.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(14): created implicit net for "p0_and_c0" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(18): created implicit net for "p1_and_p0_and_c0" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(19): created implicit net for "p1_and_g0" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(20): created implicit net for "p1_and_p0_and_c0_or_p1_and_g0" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(24): created implicit net for "p1_and_p0_and_c0_and_p2" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(25): created implicit net for "p1_and_g0_and_p2" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(26): created implicit net for "g1_and_p2" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(27): created implicit net for "p1_and_g0_and_p2_or_p1_and_g0_and_p2" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(28): created implicit net for "g1_and_p2_or_p1_and_g0_and_p2_or_p1_and_g0_and_p2" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(33): created implicit net for "p1_and_p0_and_c0_and_p2_and_p3" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(34): created implicit net for "p1_and_g0_and_p2_and_p3" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(35): created implicit net for "g1_and_p2_and_p3" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 35
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(36): created implicit net for "p3_and_g2" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(37): created implicit net for "p1_and_p0_and_c0_and_p2_and_p3_or_p1_and_g0_and_p2_and_p3" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 37
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(38): created implicit net for "g1_and_p2_and_p3_or_p1_and_p0_and_c0_and_p2_and_p3_or_p1_and_g0_and_p2_and_p3" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 38
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(39): created implicit net for "g1_and_p2_and_p3_or_p1_and_p0_and_c0_and_p2_and_p3_or_p1_and_g0_and_p2_and_p3_or_p3_and_g2" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(40): created implicit net for "c_out" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(47): created implicit net for "p1_and_p0" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 47
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(48): created implicit net for "p3_and_p2" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(52): created implicit net for "p1_and_g0_and_p2_and_p3_or_g1_and_p2_and_p3" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at cla_4bit.v(53): created implicit net for "p3_and_g2_or_p1_and_g0_and_p2_and_p3_or_g1_and_p2_and_p3" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 53
+Info (12127): Elaborating entity "mips" for the top level hierarchy
+Info (12128): Elaborating entity "cla_level2_32bit" for hierarchy "cla_level2_32bit:pc_adder" File: C:/Users/serdar/Desktop/mips/mips.v Line: 16
+Info (12128): Elaborating entity "cla_16bit" for hierarchy "cla_level2_32bit:pc_adder|cla_16bit:cla1" File: C:/Users/serdar/Desktop/mips/cla_level2_32bit.v Line: 6
+Info (12128): Elaborating entity "cla_4bit" for hierarchy "cla_level2_32bit:pc_adder|cla_16bit:cla1|cla_4bit:cla1" File: C:/Users/serdar/Desktop/mips/cla_level1_8bit.v Line: 5
+Info (12128): Elaborating entity "xor_4bit" for hierarchy "cla_level2_32bit:pc_adder|cla_16bit:cla1|cla_4bit:cla1|xor_4bit:xor1" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 5
+Info (12128): Elaborating entity "and_4bit" for hierarchy "cla_level2_32bit:pc_adder|cla_16bit:cla1|cla_4bit:cla1|and_4bit:and11" File: C:/Users/serdar/Desktop/mips/cla_4bit.v Line: 6
+Info (12128): Elaborating entity "instruction_block" for hierarchy "instruction_block:instruction_memory" File: C:/Users/serdar/Desktop/mips/mips.v Line: 18
+Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:cu" File: C:/Users/serdar/Desktop/mips/mips.v Line: 22
+Info (12128): Elaborating entity "mux_5bit" for hierarchy "mux_5bit:regDst_mux1" File: C:/Users/serdar/Desktop/mips/mips.v Line: 26
+Info (12128): Elaborating entity "and_5bit" for hierarchy "mux_5bit:regDst_mux1|and_5bit:and1" File: C:/Users/serdar/Desktop/mips/mux_5bit.v Line: 28
+Info (12128): Elaborating entity "or_5bit" for hierarchy "mux_5bit:regDst_mux1|or_5bit:or65" File: C:/Users/serdar/Desktop/mips/mux_5bit.v Line: 31
+Info (12128): Elaborating entity "register_block" for hierarchy "register_block:registers" File: C:/Users/serdar/Desktop/mips/mips.v Line: 33
+Warning (10175): Verilog HDL warning at register_block.v(30): ignoring unsupported system task File: C:/Users/serdar/Desktop/mips/register_block.v Line: 30
+Warning (10240): Verilog HDL Always Construct warning at register_block.v(16): inferring latch(es) for variable "read_data2", which holds its previous value in one or more paths through the always construct File: C:/Users/serdar/Desktop/mips/register_block.v Line: 16
+Info (10041): Inferred latch for "read_data2[0]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[1]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[2]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[3]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[4]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[5]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[6]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[7]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[8]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[9]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[10]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[11]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[12]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[13]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[14]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[15]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[16]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[17]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[18]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[19]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[20]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[21]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[22]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[23]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[24]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[25]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[26]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[27]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[28]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[29]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[30]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (10041): Inferred latch for "read_data2[31]" at register_block.v(20) File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (12128): Elaborating entity "alu_control" for hierarchy "alu_control:alu_control_unit" File: C:/Users/serdar/Desktop/mips/mips.v Line: 35
+Info (12128): Elaborating entity "sign_extend" for hierarchy "sign_extend:sign_ext" File: C:/Users/serdar/Desktop/mips/mips.v Line: 36
+Info (12128): Elaborating entity "or_16bit" for hierarchy "sign_extend:sign_ext|or_16bit:or16bit" File: C:/Users/serdar/Desktop/mips/sign_extend.v Line: 6
+Info (12128): Elaborating entity "or_8bit" for hierarchy "sign_extend:sign_ext|or_16bit:or16bit|or_8bit:t1" File: C:/Users/serdar/Desktop/mips/or_16bit.v Line: 5
+Info (12128): Elaborating entity "or_4bit" for hierarchy "sign_extend:sign_ext|or_16bit:or16bit|or_8bit:t1|or_4bit:t1" File: C:/Users/serdar/Desktop/mips/or_8bit.v Line: 5
+Info (12128): Elaborating entity "mux_2x1" for hierarchy "mux_2x1:read_data2_or_extended_imm" File: C:/Users/serdar/Desktop/mips/mips.v Line: 37
+Info (12128): Elaborating entity "and_32bit" for hierarchy "mux_2x1:read_data2_or_extended_imm|and_32bit:and1" File: C:/Users/serdar/Desktop/mips/mux_2x1.v Line: 80
+Info (12128): Elaborating entity "and_16bit" for hierarchy "mux_2x1:read_data2_or_extended_imm|and_32bit:and1|and_16bit:t1" File: C:/Users/serdar/Desktop/mips/and_32bit.v Line: 5
+Info (12128): Elaborating entity "and_8bit" for hierarchy "mux_2x1:read_data2_or_extended_imm|and_32bit:and1|and_16bit:t1|and_8bit:t1" File: C:/Users/serdar/Desktop/mips/and_16bit.v Line: 5
+Info (12128): Elaborating entity "or_32bit" for hierarchy "mux_2x1:read_data2_or_extended_imm|or_32bit:or65" File: C:/Users/serdar/Desktop/mips/mux_2x1.v Line: 83
+Info (12128): Elaborating entity "alu" for hierarchy "alu:aluu" File: C:/Users/serdar/Desktop/mips/mips.v Line: 38
+Info (12128): Elaborating entity "xor_32bit" for hierarchy "alu:aluu|xor_32bit:xor32" File: C:/Users/serdar/Desktop/mips/alu.v Line: 33
+Info (12128): Elaborating entity "xor_16bit" for hierarchy "alu:aluu|xor_32bit:xor32|xor_16bit:t1" File: C:/Users/serdar/Desktop/mips/xor_32bit.v Line: 5
+Info (12128): Elaborating entity "xor_8bit" for hierarchy "alu:aluu|xor_32bit:xor32|xor_16bit:t1|xor_8bit:t1" File: C:/Users/serdar/Desktop/mips/xor_16bit.v Line: 5
+Info (12128): Elaborating entity "nor_32bit" for hierarchy "alu:aluu|nor_32bit:nor32" File: C:/Users/serdar/Desktop/mips/alu.v Line: 36
+Info (12128): Elaborating entity "nor_16bit" for hierarchy "alu:aluu|nor_32bit:nor32|nor_16bit:t1" File: C:/Users/serdar/Desktop/mips/nor_32bit.v Line: 5
+Info (12128): Elaborating entity "nor_8bit" for hierarchy "alu:aluu|nor_32bit:nor32|nor_16bit:t1|nor_8bit:t1" File: C:/Users/serdar/Desktop/mips/nor_16bit.v Line: 5
+Info (12128): Elaborating entity "nor_4bit" for hierarchy "alu:aluu|nor_32bit:nor32|nor_16bit:t1|nor_8bit:t1|nor_4bit:t1" File: C:/Users/serdar/Desktop/mips/nor_8bit.v Line: 5
+Info (12128): Elaborating entity "mod" for hierarchy "alu:aluu|mod:mod1" File: C:/Users/serdar/Desktop/mips/alu.v Line: 56
+Info (12128): Elaborating entity "mod_cu" for hierarchy "alu:aluu|mod:mod1|mod_cu:mod1" File: C:/Users/serdar/Desktop/mips/mod.v Line: 10
+Info (12128): Elaborating entity "mod_dp" for hierarchy "alu:aluu|mod:mod1|mod_cu:mod1|mod_dp:mod1" File: C:/Users/serdar/Desktop/mips/mod_cu.v Line: 23
+Info (12128): Elaborating entity "mux_8x1" for hierarchy "alu:aluu|mux_8x1:mux" File: C:/Users/serdar/Desktop/mips/alu.v Line: 59
+Info (12128): Elaborating entity "shift_left_2" for hierarchy "shift_left_2:sl2_for_imm" File: C:/Users/serdar/Desktop/mips/mips.v Line: 40
+Info (12128): Elaborating entity "shift_left_2_jump" for hierarchy "shift_left_2_jump:sl2_for_jump" File: C:/Users/serdar/Desktop/mips/mips.v Line: 52
+Info (12128): Elaborating entity "concat" for hierarchy "concat:concat_for_jump_address" File: C:/Users/serdar/Desktop/mips/mips.v Line: 53
+Warning (10739): Verilog HDL warning at concat.v(7): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 7
+Warning (10739): Verilog HDL warning at concat.v(8): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 8
+Warning (10739): Verilog HDL warning at concat.v(9): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 9
+Warning (10739): Verilog HDL warning at concat.v(10): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 10
+Warning (10739): Verilog HDL warning at concat.v(11): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 11
+Warning (10739): Verilog HDL warning at concat.v(12): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 12
+Warning (10739): Verilog HDL warning at concat.v(13): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 13
+Warning (10739): Verilog HDL warning at concat.v(14): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 14
+Warning (10739): Verilog HDL warning at concat.v(15): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 15
+Warning (10739): Verilog HDL warning at concat.v(16): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 16
+Warning (10739): Verilog HDL warning at concat.v(17): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 17
+Warning (10739): Verilog HDL warning at concat.v(18): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 18
+Warning (10739): Verilog HDL warning at concat.v(19): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 19
+Warning (10739): Verilog HDL warning at concat.v(20): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 20
+Warning (10739): Verilog HDL warning at concat.v(21): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 21
+Warning (10739): Verilog HDL warning at concat.v(22): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 22
+Warning (10739): Verilog HDL warning at concat.v(23): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 23
+Warning (10739): Verilog HDL warning at concat.v(24): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 24
+Warning (10739): Verilog HDL warning at concat.v(25): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 25
+Warning (10739): Verilog HDL warning at concat.v(26): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 26
+Warning (10739): Verilog HDL warning at concat.v(27): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 27
+Warning (10739): Verilog HDL warning at concat.v(28): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 28
+Warning (10739): Verilog HDL warning at concat.v(29): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 29
+Warning (10739): Verilog HDL warning at concat.v(30): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 30
+Warning (10739): Verilog HDL warning at concat.v(31): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 31
+Warning (10739): Verilog HDL warning at concat.v(32): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 32
+Warning (10739): Verilog HDL warning at concat.v(33): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 33
+Warning (10739): Verilog HDL warning at concat.v(34): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 34
+Warning (10739): Verilog HDL warning at concat.v(35): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 35
+Warning (10739): Verilog HDL warning at concat.v(36): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 36
+Warning (10739): Verilog HDL warning at concat.v(37): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 37
+Warning (10739): Verilog HDL warning at concat.v(38): actual bit length 32 differs from formal bit length 1 File: C:/Users/serdar/Desktop/mips/concat.v Line: 38
+Info (12128): Elaborating entity "memory_block" for hierarchy "memory_block:data_Memory" File: C:/Users/serdar/Desktop/mips/mips.v Line: 58
+Warning (10175): Verilog HDL warning at memory_block.v(37): ignoring unsupported system task File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 37
+Warning (10240): Verilog HDL Always Construct warning at memory_block.v(12): inferring latch(es) for variable "read_data", which holds its previous value in one or more paths through the always construct File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 12
+Info (10041): Inferred latch for "read_data[0]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[1]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[2]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[3]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[4]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[5]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[6]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[7]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[8]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[9]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[10]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[11]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[12]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[13]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[14]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[15]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[16]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[17]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[18]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[19]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[20]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[21]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[22]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[23]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[24]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[25]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[26]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[27]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[28]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[29]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[30]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Info (10041): Inferred latch for "read_data[31]" at memory_block.v(13) File: C:/Users/serdar/Desktop/mips/memory_block.v Line: 13
+Warning (14026): LATCH primitive "register_block:registers|read_data2[2]" is permanently enabled File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Warning (14026): LATCH primitive "register_block:registers|read_data2[1]" is permanently enabled File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Warning (14026): LATCH primitive "register_block:registers|read_data2[0]" is permanently enabled File: C:/Users/serdar/Desktop/mips/register_block.v Line: 20
+Info (17049): 10 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/serdar/Desktop/mips/output_files/mips.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clock" File: C:/Users/serdar/Desktop/mips/mips.v Line: 3
+Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 91 warnings
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Fri Jan 19 18:40:29 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:16
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/serdar/Desktop/mips/output_files/mips.map.smsg.
+
+

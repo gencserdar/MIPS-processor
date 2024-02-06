@@ -1,0 +1,58 @@
+module alu (
+	 output reg [31:0] alu_result,
+	 output reg zero_bit,
+    input [31:0] alu_src1,
+    input [31:0] alu_src2,
+    input [2:0] alu_ctr
+);
+
+wire [31:0] sum;
+wire [31:0] difference;
+wire [31:0] xor_res;
+wire [31:0] nor_res;
+wire [31:0] or_res;
+wire [31:0] and_res;
+wire [31:0] lt_res;
+wire [31:0] mod_res;
+wire [31:0] _1s_complement;
+wire [31:0] _2s_complement;
+  
+wire Cout_sum, Cout_sub, Cout_lt, _2s_complement_cout, lt;
+
+//and
+and_32bit and32(and_res, a, b);
+
+//or
+or_32bit or32(or_res, a, b);
+
+//xor
+xor_32bit xor32(xor_res, a, b);
+
+//nor
+nor_32bit nor32(nor_res, a, b);
+
+//substract
+//1s complement of b
+xor_32bit ones_complement(_1s_complement, b, 32'hFFFFFFFF);
+//2s complement of b
+cla_level2_32bit twos_complement(_2s_complement, _2s_complement_cout, _1s_complement, 32'h00000001, 1'b0);
+//b is now -b
+cla_level2_32bit substract(difference, Cout_sub, a, _2s_complement, 1'b0);
+
+//lessthan
+//takes the most significant bit of a-b operation, if its 1 it means that the result is negative which means b>a
+and and1(lt, difference[31], 1'b1);
+//result of lessthan is 32'h00000001 or 32'b0 so we need 32bit output, to achieve this we use adder
+cla_level2_32bit lessthan(lt_res, Cout_lt, 32'b0, 32'b0, lt);
+
+//add
+cla_level2_32bit adder32(sum, Cout_sum, a,b, 1'b0);
+
+//mod
+mod mod1 (mod_res, clk, rst, start, a, b);
+
+//8x1 mux
+mux_8x1 mux (alu_result, and_res, or_res, xor_res, nor_res, lt_res, sum, difference, mod_res, ALUop);
+
+endmodule
+

@@ -1,0 +1,59 @@
+module mips_tb();
+
+  reg clock;
+  
+	mips uut (
+	 .clock(clock)
+	);
+
+	initial begin
+		clock = 0;
+		forever #5 clock = ~clock;
+	end
+
+	initial begin
+		#2;
+		$display("instruction: %b %b %b %b %b %b", uut.instruction[31:26], uut.instruction[25:21], uut.instruction[20:16], uut.instruction[15:11], uut.instruction[10:6], uut.instruction[5:0]);
+		$display("program counter: %d", uut.pc_out);
+		$display("read data 1: %b", uut.read_data1);
+		$display("read data 2: %b", uut.read_data2);
+		$display("alu result: %b", uut.alu_result);
+		$display("ALU op: %b", uut.ALUop);
+		$display("ALU ctr: %b", uut.ALUsrc);
+		$display("branch: %b", uut.branch);
+		$display("memRead: %b", uut.memRead);
+		$display("memWrite: %b", uut.memWrite);
+		$display("move: %b", uut.move);
+		$display("jump: %b", uut.jump);
+		$display("regDst: %b", uut.regDst);
+		$display("regWrite: %b", uut.regWrite);
+		$display("zero: %b", uut.zero);
+		$display("is branch possible: %b", uut.is_branch_possible);
+		$display(" ");
+	end
+
+	initial begin
+  		repeat (2) begin
+			#10;
+			$display("instruction: %b %b %b %b", uut.instruction[31:26], uut.instruction[25:21], uut.instruction[20:16], uut.instruction[15:0]);
+			$display("program counter: %d", uut.pc_out);
+			$display("read data 1: %b", uut.read_data1);
+			$display("read data 2: %b", uut.read_data2);
+			$display("alu result: %b", uut.alu_result);
+			$display("ALU op: %b", uut.ALUop);
+			$display("ALU ctr: %b", uut.ALUsrc);
+			$display("branch: %b", uut.branch);
+			$display("memRead: %b", uut.memRead);
+			$display("memWrite: %b", uut.memWrite);
+			$display("move: %b", uut.move);
+			$display("jump: %b", uut.jump);
+			$display("regDst: %b", uut.regDst);
+		   $display("regWrite: %b", uut.regWrite);
+			$display("zero: %b", uut.zero);
+		   $display("is branch possible: %b", uut.is_branch_possible);
+			$display(" ");
+		end
+		$stop;
+	end
+
+endmodule

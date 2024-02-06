@@ -1,0 +1,61 @@
+module memory_block_tb;
+
+    reg byteOperations;
+    reg [17:0] address;
+    reg [31:0] write_data;
+    reg memRead, memWrite;
+    wire [31:0] read_data;
+
+    // Instantiate the memory_block module
+    memory_block uut (
+        .read_data(read_data),
+        .byteOperations(byteOperations),
+        .address(address),
+        .write_data(write_data),
+        .memRead(memRead),
+        .memWrite(memWrite)
+    );
+
+    // Initialize signals
+    initial begin
+        byteOperations = 0;
+        address = 18'b0; // Example address
+        write_data = 32'hA5A5A5A5; // Example write data
+        memRead = 0; // Initialize to 0 for read operation
+        memWrite = 0; // Initialize to 0 for write operation
+
+        // Add initial values to memory
+        // You may modify these values based on your requirements
+        $readmemb("memory.mem", uut.mem);
+
+        // Perform read operation
+        #10; // Wait for a few simulation cycles
+        memRead = 1; // Set for read operation
+		  #10;
+        // Display read data
+        $display("Read Data: %h", read_data);
+
+        // Perform write operation
+        memRead = 0; // Set back to 0 for write operation
+        memWrite = 1; // Set to 1 for write operation
+        write_data = 32'h12345678; // New data to be written
+
+        #10; // Wait for a few simulation cycles
+		  memRead = 1;
+		  #10;
+        // Display updated read data after write operation
+        $display("Read Data: %h", read_data);
+		  
+		  memRead = 0;
+		  #10;
+		  address = 18'b000000000000000001;
+		  #10;
+		  memRead = 1;
+		  #10;
+		  $display("Read Data: %h", read_data);
+
+        // End simulation
+        $finish;
+    end
+
+endmodule

@@ -1,0 +1,24 @@
+module mod_dp (
+  output wire lt,
+  output wire [31:0] temp,
+  input wire [31:0] a,
+  input wire [31:0] b
+);
+wire [31:0] _1s_complement;
+wire [31:0] _2s_complement;
+wire Cout_sub;
+wire [31:0] diff;
+
+// temp= a-b
+xor_32bit ones_complement (_1s_complement, b, 32'hFFFFFFFF);
+cla_level2_32bit twos_complement (_2s_complement, Cout_sub , _1s_complement, 32'h00000001, 1'b0);
+cla_level2_32bit substract1 (temp, Cout_sub, a, _2s_complement, 1'b0);
+
+// diff = temp-b if result is negative then lt = 1, then go to nextstate output_result
+cla_level2_32bit substract2 (diff, Cout_sub, temp , _2s_complement, 1'b0);
+
+//lessthan
+and and1(lt, diff[31], 1'b1);
+	
+	
+endmodule

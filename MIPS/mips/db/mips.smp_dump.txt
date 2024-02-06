@@ -1,0 +1,12 @@
+
+State Machine - |mips|alu:aluu|mod:mod1|mod_cu:mod1|next_state
+Name next_state.IDLE next_state.OUTPUT_RESULT next_state.SUBTRACT 
+next_state.IDLE 0 0 0 
+next_state.SUBTRACT 1 0 1 
+next_state.OUTPUT_RESULT 1 1 0 
+
+State Machine - |mips|alu:aluu|mod:mod1|mod_cu:mod1|state
+Name state.IDLE state.OUTPUT_RESULT state.SUBTRACT 
+state.IDLE 0 0 0 
+state.SUBTRACT 1 0 1 
+state.OUTPUT_RESULT 1 1 0 

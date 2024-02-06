@@ -1,0 +1,1659 @@
+# Reading pref.tcl
+# do mips_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/cla_level2_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:50 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/cla_level2_32bit.v 
+# -- Compiling module cla_level2_32bit
+# 
+# Top level modules:
+# 	cla_level2_32bit
+# End time: 18:42:50 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/cla_level1_8bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:50 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/cla_level1_8bit.v 
+# -- Compiling module cla_16bit
+# 
+# Top level modules:
+# 	cla_16bit
+# End time: 18:42:50 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/and_4bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:50 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/and_4bit.v 
+# -- Compiling module and_4bit
+# 
+# Top level modules:
+# 	and_4bit
+# End time: 18:42:51 on Jan 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/and_8bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:51 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/and_8bit.v 
+# -- Compiling module and_8bit
+# 
+# Top level modules:
+# 	and_8bit
+# End time: 18:42:51 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/and_16bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:51 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/and_16bit.v 
+# -- Compiling module and_16bit
+# 
+# Top level modules:
+# 	and_16bit
+# End time: 18:42:51 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/and_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:51 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/and_32bit.v 
+# -- Compiling module and_32bit
+# 
+# Top level modules:
+# 	and_32bit
+# End time: 18:42:51 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/or_4bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:51 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/or_4bit.v 
+# -- Compiling module or_4bit
+# 
+# Top level modules:
+# 	or_4bit
+# End time: 18:42:51 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/or_8bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:51 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/or_8bit.v 
+# -- Compiling module or_8bit
+# 
+# Top level modules:
+# 	or_8bit
+# End time: 18:42:51 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/or_16bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:51 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/or_16bit.v 
+# -- Compiling module or_16bit
+# 
+# Top level modules:
+# 	or_16bit
+# End time: 18:42:51 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/or_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:51 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/or_32bit.v 
+# -- Compiling module or_32bit
+# 
+# Top level modules:
+# 	or_32bit
+# End time: 18:42:51 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/xor_4bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:51 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/xor_4bit.v 
+# -- Compiling module xor_4bit
+# 
+# Top level modules:
+# 	xor_4bit
+# End time: 18:42:51 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/xor_8bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:51 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/xor_8bit.v 
+# -- Compiling module xor_8bit
+# 
+# Top level modules:
+# 	xor_8bit
+# End time: 18:42:51 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/xor_16bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:52 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/xor_16bit.v 
+# -- Compiling module xor_16bit
+# 
+# Top level modules:
+# 	xor_16bit
+# End time: 18:42:52 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/xor_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:52 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/xor_32bit.v 
+# -- Compiling module xor_32bit
+# 
+# Top level modules:
+# 	xor_32bit
+# End time: 18:42:52 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/nor_4bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:52 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/nor_4bit.v 
+# -- Compiling module nor_4bit
+# 
+# Top level modules:
+# 	nor_4bit
+# End time: 18:42:52 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/nor_8bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:52 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/nor_8bit.v 
+# -- Compiling module nor_8bit
+# 
+# Top level modules:
+# 	nor_8bit
+# End time: 18:42:52 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/nor_16bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:52 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/nor_16bit.v 
+# -- Compiling module nor_16bit
+# 
+# Top level modules:
+# 	nor_16bit
+# End time: 18:42:52 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/nor_32bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:52 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/nor_32bit.v 
+# -- Compiling module nor_32bit
+# 
+# Top level modules:
+# 	nor_32bit
+# End time: 18:42:52 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/mux_2x1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:52 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/mux_2x1.v 
+# -- Compiling module mux_2x1
+# 
+# Top level modules:
+# 	mux_2x1
+# End time: 18:42:52 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/mux_8x1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:52 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/mux_8x1.v 
+# -- Compiling module mux_8x1
+# 
+# Top level modules:
+# 	mux_8x1
+# End time: 18:42:52 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/alu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:52 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/alu.v 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 18:42:53 on Jan 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/control_unit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:53 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/control_unit.v 
+# -- Compiling module control_unit
+# 
+# Top level modules:
+# 	control_unit
+# End time: 18:42:53 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/alu_control.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:53 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/alu_control.v 
+# -- Compiling module alu_control
+# 
+# Top level modules:
+# 	alu_control
+# End time: 18:42:53 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/sign_extend.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:53 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/sign_extend.v 
+# -- Compiling module sign_extend
+# 
+# Top level modules:
+# 	sign_extend
+# End time: 18:42:53 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/shift_left_2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:53 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/shift_left_2.v 
+# -- Compiling module shift_left_2
+# 
+# Top level modules:
+# 	shift_left_2
+# End time: 18:42:53 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/mips.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:53 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/mips.v 
+# -- Compiling module mips
+# 
+# Top level modules:
+# 	mips
+# End time: 18:42:53 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/mod_cu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:53 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/mod_cu.v 
+# -- Compiling module mod_cu
+# 
+# Top level modules:
+# 	mod_cu
+# End time: 18:42:53 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/mod.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:53 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/mod.v 
+# -- Compiling module mod
+# 
+# Top level modules:
+# 	mod
+# End time: 18:42:53 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/mod_dp.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:53 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/mod_dp.v 
+# -- Compiling module mod_dp
+# 
+# Top level modules:
+# 	mod_dp
+# End time: 18:42:54 on Jan 19,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/mux_5bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:54 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/mux_5bit.v 
+# -- Compiling module mux_5bit
+# 
+# Top level modules:
+# 	mux_5bit
+# End time: 18:42:54 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/and_5bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:54 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/and_5bit.v 
+# -- Compiling module and_5bit
+# 
+# Top level modules:
+# 	and_5bit
+# End time: 18:42:54 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/or_5bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:54 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/or_5bit.v 
+# -- Compiling module or_5bit
+# 
+# Top level modules:
+# 	or_5bit
+# End time: 18:42:54 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/concat.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:54 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/concat.v 
+# -- Compiling module concat
+# 
+# Top level modules:
+# 	concat
+# End time: 18:42:54 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/shift_left_2_jump.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:54 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/shift_left_2_jump.v 
+# -- Compiling module shift_left_2_jump
+# 
+# Top level modules:
+# 	shift_left_2_jump
+# End time: 18:42:54 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/cla_4bit.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:54 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/cla_4bit.v 
+# -- Compiling module cla_4bit
+# 
+# Top level modules:
+# 	cla_4bit
+# End time: 18:42:54 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/register_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:54 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/register_block.v 
+# -- Compiling module register_block
+# ** Warning: C:/Users/serdar/Desktop/mips/register_block.v(16): (vlog-2182) 'registers' might be read before written in always_comb or always @* block.
+# 
+# Top level modules:
+# 	register_block
+# End time: 18:42:54 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/instruction_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:54 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/instruction_block.v 
+# -- Compiling module instruction_block
+# 
+# Top level modules:
+# 	instruction_block
+# End time: 18:42:54 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/memory_block.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:55 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/memory_block.v 
+# -- Compiling module memory_block
+# ** Warning: C:/Users/serdar/Desktop/mips/memory_block.v(12): (vlog-2182) 'memory' might be read before written in always_comb or always @* block.
+# 
+# Top level modules:
+# 	memory_block
+# End time: 18:42:55 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/serdar/Desktop/mips {C:/Users/serdar/Desktop/mips/mips_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:42:55 on Jan 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/serdar/Desktop/mips" C:/Users/serdar/Desktop/mips/mips_tb.v 
+# -- Compiling module mips_tb
+# 
+# Top level modules:
+# 	mips_tb
+# End time: 18:42:55 on Jan 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  mips_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" mips_tb 
+# Start time: 18:42:55 on Jan 19,2024
+# Loading work.mips_tb
+# Loading work.mips
+# Loading work.cla_level2_32bit
+# Loading work.cla_16bit
+# Loading work.cla_4bit
+# Loading work.xor_4bit
+# Loading work.and_4bit
+# Loading work.instruction_block
+# Loading work.control_unit
+# Loading work.mux_5bit
+# Loading work.and_5bit
+# Loading work.or_5bit
+# Loading work.register_block
+# Loading work.alu_control
+# Loading work.sign_extend
+# Loading work.or_16bit
+# Loading work.or_8bit
+# Loading work.or_4bit
+# Loading work.mux_2x1
+# Loading work.and_32bit
+# Loading work.and_16bit
+# Loading work.and_8bit
+# Loading work.or_32bit
+# Loading work.alu
+# Loading work.xor_32bit
+# Loading work.xor_16bit
+# Loading work.xor_8bit
+# Loading work.nor_32bit
+# Loading work.nor_16bit
+# Loading work.nor_8bit
+# Loading work.nor_4bit
+# Loading work.mod
+# Loading work.mod_cu
+# Loading work.mod_dp
+# Loading work.mux_8x1
+# Loading work.shift_left_2
+# Loading work.shift_left_2_jump
+# Loading work.concat
+# Loading work.memory_block
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# INSTRUCTION INDEX: 0, ITERATION: 1
+# PC: 0
+# NEXT PC: 4
+# INSTRUCTION: 000010 00000 00001 00000 00000 000101
+# TYPE: ADDI
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000000101
+# alu result:  00000000000000000000000000000101
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00001
+# register write data: 00000000000000000000000000000101
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 1, ITERATION: 2
+# PC: 4
+# NEXT PC: 8
+# INSTRUCTION: 000011 00000 00010 11111 11111 111000
+# TYPE: SUBI
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 11111111111111111111111111111000
+# alu result:  00000000000000000000000000001000
+# ALUop:  110, ALUctr: 110
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00010
+# register write data: 00000000000000000000000000001000
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 2, ITERATION: 3
+# PC: 8
+# NEXT PC: 12
+# INSTRUCTION: 100011 00001 00000 00000 00000 000111
+# TYPE: BEQ
+# alu source 1: 00000000000000000000000000000101
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000101
+# ALUop:  110, ALUctr: 110
+# ALUsrc:  0
+# branch:  1, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 3, ITERATION: 4
+# PC: 12
+# NEXT PC: 16
+# INSTRUCTION: 100000 00001 00011 00000 00000 000000
+# TYPE: MOVE
+# alu source 1: 00000000000000000000000000000101
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000101
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 1
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00011
+# register write data: 00000000000000000000000000000101
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 4, ITERATION: 5
+# PC: 16
+# NEXT PC: 44
+# INSTRUCTION: 111001 00000 00000 00000 00000 001011
+# TYPE: JAL
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000001011
+# alu result:  00000000000000000000000000000000
+# ALUop:  000, ALUctr: 000
+# ALUsrc:  1
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 1, jal: 1, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 11111
+# register write data: 00000000000000000000000000010000
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 11, ITERATION: 6
+# PC: 44
+# NEXT PC: 48
+# INSTRUCTION: 000101 00011 00100 00001 00000 000001
+# TYPE: ORI
+# alu source 1: 00000000000000000000000000000101
+# alu source 2: 00000000000000000000100000000001
+# alu result:  00000000000000000000100000000101
+# ALUop:  001, ALUctr: 001
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00100
+# register write data: 00000000000000000000100000000101
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 12, ITERATION: 7
+# PC: 48
+# NEXT PC: 20
+# INSTRUCTION: 000000 11111 00000 00000 00000 001000
+# TYPE: JR
+# alu source 1: 00000000000000000000000000010100
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000000
+# ALUop:  111, ALUctr: 000
+# ALUsrc:  0
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 1
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  1, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 5, ITERATION: 8
+# PC: 20
+# NEXT PC: 24
+# INSTRUCTION: 010000 00010 00100 00000 00000 000000
+# TYPE: SW
+# alu source 1: 00000000000000000000000000001000
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000001000
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 1
+# memory write index: 01000
+# memory write data: 00000000000000000000100000000101
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 6, ITERATION: 9
+# PC: 24
+# NEXT PC: 28
+# INSTRUCTION: 000010 00010 00010 00000 00000 000100
+# TYPE: ADDI
+# alu source 1: 00000000000000000000000000001000
+# alu source 2: 00000000000000000000000000000100
+# alu result:  00000000000000000000000000001100
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00010
+# register write data: 00000000000000000000000000001100
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 7, ITERATION: 10
+# PC: 28
+# NEXT PC: 32
+# INSTRUCTION: 100000 00001 00110 00000 00000 000000
+# TYPE: MOVE
+# alu source 1: 00000000000000000000000000000101
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000101
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 1
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00110
+# register write data: 00000000000000000000000000000101
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 8, ITERATION: 11
+# PC: 32
+# NEXT PC: 36
+# INSTRUCTION: 000011 00110 00001 00000 00000 000001
+# TYPE: SUBI
+# alu source 1: 00000000000000000000000000000101
+# alu source 2: 00000000000000000000000000000001
+# alu result:  00000000000000000000000000000100
+# ALUop:  110, ALUctr: 110
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00001
+# register write data: 00000000000000000000000000000100
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 9, ITERATION: 12
+# PC: 36
+# NEXT PC: 8
+# INSTRUCTION: 111000 00000 00000 00000 00000 000010
+# TYPE: JUMP
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000000010
+# alu result:  00000000000000000000000000000000
+# ALUop:  000, ALUctr: 000
+# ALUsrc:  1
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 1, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 2, ITERATION: 13
+# PC: 8
+# NEXT PC: 12
+# INSTRUCTION: 100011 00001 00000 00000 00000 000111
+# TYPE: BEQ
+# alu source 1: 00000000000000000000000000000100
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000100
+# ALUop:  110, ALUctr: 110
+# ALUsrc:  0
+# branch:  1, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 3, ITERATION: 14
+# PC: 12
+# NEXT PC: 16
+# INSTRUCTION: 100000 00001 00011 00000 00000 000000
+# TYPE: MOVE
+# alu source 1: 00000000000000000000000000000100
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000100
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 1
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00011
+# register write data: 00000000000000000000000000000100
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 4, ITERATION: 15
+# PC: 16
+# NEXT PC: 44
+# INSTRUCTION: 111001 00000 00000 00000 00000 001011
+# TYPE: JAL
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000001011
+# alu result:  00000000000000000000000000000000
+# ALUop:  000, ALUctr: 000
+# ALUsrc:  1
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 1, jal: 1, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 11111
+# register write data: 00000000000000000000000000010000
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 11, ITERATION: 16
+# PC: 44
+# NEXT PC: 48
+# INSTRUCTION: 000101 00011 00100 00001 00000 000001
+# TYPE: ORI
+# alu source 1: 00000000000000000000000000000100
+# alu source 2: 00000000000000000000100000000001
+# alu result:  00000000000000000000100000000101
+# ALUop:  001, ALUctr: 001
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00100
+# register write data: 00000000000000000000100000000101
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 12, ITERATION: 17
+# PC: 48
+# NEXT PC: 20
+# INSTRUCTION: 000000 11111 00000 00000 00000 001000
+# TYPE: JR
+# alu source 1: 00000000000000000000000000010100
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000000
+# ALUop:  111, ALUctr: 000
+# ALUsrc:  0
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 1
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  1, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 5, ITERATION: 18
+# PC: 20
+# NEXT PC: 24
+# INSTRUCTION: 010000 00010 00100 00000 00000 000000
+# TYPE: SW
+# alu source 1: 00000000000000000000000000010000
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000010000
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 1
+# memory write index: 10000
+# memory write data: 00000000000000000000100000000101
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 6, ITERATION: 19
+# PC: 24
+# NEXT PC: 28
+# INSTRUCTION: 000010 00010 00010 00000 00000 000100
+# TYPE: ADDI
+# alu source 1: 00000000000000000000000000010000
+# alu source 2: 00000000000000000000000000000100
+# alu result:  00000000000000000000000000010100
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00010
+# register write data: 00000000000000000000000000010100
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 7, ITERATION: 20
+# PC: 28
+# NEXT PC: 32
+# INSTRUCTION: 100000 00001 00110 00000 00000 000000
+# TYPE: MOVE
+# alu source 1: 00000000000000000000000000000100
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000100
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 1
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00110
+# register write data: 00000000000000000000000000000100
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 8, ITERATION: 21
+# PC: 32
+# NEXT PC: 36
+# INSTRUCTION: 000011 00110 00001 00000 00000 000001
+# TYPE: SUBI
+# alu source 1: 00000000000000000000000000000100
+# alu source 2: 00000000000000000000000000000001
+# alu result:  00000000000000000000000000000011
+# ALUop:  110, ALUctr: 110
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00001
+# register write data: 00000000000000000000000000000011
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 9, ITERATION: 22
+# PC: 36
+# NEXT PC: 8
+# INSTRUCTION: 111000 00000 00000 00000 00000 000010
+# TYPE: JUMP
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000000010
+# alu result:  00000000000000000000000000000000
+# ALUop:  000, ALUctr: 000
+# ALUsrc:  1
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 1, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 2, ITERATION: 23
+# PC: 8
+# NEXT PC: 12
+# INSTRUCTION: 100011 00001 00000 00000 00000 000111
+# TYPE: BEQ
+# alu source 1: 00000000000000000000000000000011
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000011
+# ALUop:  110, ALUctr: 110
+# ALUsrc:  0
+# branch:  1, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 3, ITERATION: 24
+# PC: 12
+# NEXT PC: 16
+# INSTRUCTION: 100000 00001 00011 00000 00000 000000
+# TYPE: MOVE
+# alu source 1: 00000000000000000000000000000011
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000011
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 1
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00011
+# register write data: 00000000000000000000000000000011
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 4, ITERATION: 25
+# PC: 16
+# NEXT PC: 44
+# INSTRUCTION: 111001 00000 00000 00000 00000 001011
+# TYPE: JAL
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000001011
+# alu result:  00000000000000000000000000000000
+# ALUop:  000, ALUctr: 000
+# ALUsrc:  1
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 1, jal: 1, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 11111
+# register write data: 00000000000000000000000000010000
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 11, ITERATION: 26
+# PC: 44
+# NEXT PC: 48
+# INSTRUCTION: 000101 00011 00100 00001 00000 000001
+# TYPE: ORI
+# alu source 1: 00000000000000000000000000000011
+# alu source 2: 00000000000000000000100000000001
+# alu result:  00000000000000000000100000000011
+# ALUop:  001, ALUctr: 001
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00100
+# register write data: 00000000000000000000100000000011
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 12, ITERATION: 27
+# PC: 48
+# NEXT PC: 20
+# INSTRUCTION: 000000 11111 00000 00000 00000 001000
+# TYPE: JR
+# alu source 1: 00000000000000000000000000010100
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000000
+# ALUop:  111, ALUctr: 000
+# ALUsrc:  0
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 1
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  1, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 5, ITERATION: 28
+# PC: 20
+# NEXT PC: 24
+# INSTRUCTION: 010000 00010 00100 00000 00000 000000
+# TYPE: SW
+# alu source 1: 00000000000000000000000000011000
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000011000
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 1
+# memory write index: 11000
+# memory write data: 00000000000000000000100000000011
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 6, ITERATION: 29
+# PC: 24
+# NEXT PC: 28
+# INSTRUCTION: 000010 00010 00010 00000 00000 000100
+# TYPE: ADDI
+# alu source 1: 00000000000000000000000000011000
+# alu source 2: 00000000000000000000000000000100
+# alu result:  00000000000000000000000000011100
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00010
+# register write data: 00000000000000000000000000011100
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 7, ITERATION: 30
+# PC: 28
+# NEXT PC: 32
+# INSTRUCTION: 100000 00001 00110 00000 00000 000000
+# TYPE: MOVE
+# alu source 1: 00000000000000000000000000000011
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000011
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 1
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00110
+# register write data: 00000000000000000000000000000011
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 8, ITERATION: 31
+# PC: 32
+# NEXT PC: 36
+# INSTRUCTION: 000011 00110 00001 00000 00000 000001
+# TYPE: SUBI
+# alu source 1: 00000000000000000000000000000011
+# alu source 2: 00000000000000000000000000000001
+# alu result:  00000000000000000000000000000010
+# ALUop:  110, ALUctr: 110
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00001
+# register write data: 00000000000000000000000000000010
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 9, ITERATION: 32
+# PC: 36
+# NEXT PC: 8
+# INSTRUCTION: 111000 00000 00000 00000 00000 000010
+# TYPE: JUMP
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000000010
+# alu result:  00000000000000000000000000000000
+# ALUop:  000, ALUctr: 000
+# ALUsrc:  1
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 1, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 2, ITERATION: 33
+# PC: 8
+# NEXT PC: 12
+# INSTRUCTION: 100011 00001 00000 00000 00000 000111
+# TYPE: BEQ
+# alu source 1: 00000000000000000000000000000010
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000010
+# ALUop:  110, ALUctr: 110
+# ALUsrc:  0
+# branch:  1, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 3, ITERATION: 34
+# PC: 12
+# NEXT PC: 16
+# INSTRUCTION: 100000 00001 00011 00000 00000 000000
+# TYPE: MOVE
+# alu source 1: 00000000000000000000000000000010
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000010
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 1
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00011
+# register write data: 00000000000000000000000000000010
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 4, ITERATION: 35
+# PC: 16
+# NEXT PC: 44
+# INSTRUCTION: 111001 00000 00000 00000 00000 001011
+# TYPE: JAL
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000001011
+# alu result:  00000000000000000000000000000000
+# ALUop:  000, ALUctr: 000
+# ALUsrc:  1
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 1, jal: 1, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 11111
+# register write data: 00000000000000000000000000010000
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 11, ITERATION: 36
+# PC: 44
+# NEXT PC: 48
+# INSTRUCTION: 000101 00011 00100 00001 00000 000001
+# TYPE: ORI
+# alu source 1: 00000000000000000000000000000010
+# alu source 2: 00000000000000000000100000000001
+# alu result:  00000000000000000000100000000011
+# ALUop:  001, ALUctr: 001
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00100
+# register write data: 00000000000000000000100000000011
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 12, ITERATION: 37
+# PC: 48
+# NEXT PC: 20
+# INSTRUCTION: 000000 11111 00000 00000 00000 001000
+# TYPE: JR
+# alu source 1: 00000000000000000000000000010100
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000000
+# ALUop:  111, ALUctr: 000
+# ALUsrc:  0
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 1
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  1, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 5, ITERATION: 38
+# PC: 20
+# NEXT PC: 24
+# INSTRUCTION: 010000 00010 00100 00000 00000 000000
+# TYPE: SW
+# alu source 1: 00000000000000000000000000100000
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000100000
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 1
+# memory write index: 00000
+# memory write data: 00000000000000000000100000000011
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 6, ITERATION: 39
+# PC: 24
+# NEXT PC: 28
+# INSTRUCTION: 000010 00010 00010 00000 00000 000100
+# TYPE: ADDI
+# alu source 1: 00000000000000000000000000100000
+# alu source 2: 00000000000000000000000000000100
+# alu result:  00000000000000000000000000100100
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00010
+# register write data: 00000000000000000000000000100100
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 7, ITERATION: 40
+# PC: 28
+# NEXT PC: 32
+# INSTRUCTION: 100000 00001 00110 00000 00000 000000
+# TYPE: MOVE
+# alu source 1: 00000000000000000000000000000010
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000010
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 1
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00110
+# register write data: 00000000000000000000000000000010
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 8, ITERATION: 41
+# PC: 32
+# NEXT PC: 36
+# INSTRUCTION: 000011 00110 00001 00000 00000 000001
+# TYPE: SUBI
+# alu source 1: 00000000000000000000000000000010
+# alu source 2: 00000000000000000000000000000001
+# alu result:  00000000000000000000000000000001
+# ALUop:  110, ALUctr: 110
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00001
+# register write data: 00000000000000000000000000000001
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 9, ITERATION: 42
+# PC: 36
+# NEXT PC: 8
+# INSTRUCTION: 111000 00000 00000 00000 00000 000010
+# TYPE: JUMP
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000000010
+# alu result:  00000000000000000000000000000000
+# ALUop:  000, ALUctr: 000
+# ALUsrc:  1
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 1, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 2, ITERATION: 43
+# PC: 8
+# NEXT PC: 12
+# INSTRUCTION: 100011 00001 00000 00000 00000 000111
+# TYPE: BEQ
+# alu source 1: 00000000000000000000000000000001
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000001
+# ALUop:  110, ALUctr: 110
+# ALUsrc:  0
+# branch:  1, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 3, ITERATION: 44
+# PC: 12
+# NEXT PC: 16
+# INSTRUCTION: 100000 00001 00011 00000 00000 000000
+# TYPE: MOVE
+# alu source 1: 00000000000000000000000000000001
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000001
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 1
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00011
+# register write data: 00000000000000000000000000000001
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 4, ITERATION: 45
+# PC: 16
+# NEXT PC: 44
+# INSTRUCTION: 111001 00000 00000 00000 00000 001011
+# TYPE: JAL
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000001011
+# alu result:  00000000000000000000000000000000
+# ALUop:  000, ALUctr: 000
+# ALUsrc:  1
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 1, jal: 1, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 11111
+# register write data: 00000000000000000000000000010000
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 11, ITERATION: 46
+# PC: 44
+# NEXT PC: 48
+# INSTRUCTION: 000101 00011 00100 00001 00000 000001
+# TYPE: ORI
+# alu source 1: 00000000000000000000000000000001
+# alu source 2: 00000000000000000000100000000001
+# alu result:  00000000000000000000100000000001
+# ALUop:  001, ALUctr: 001
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00100
+# register write data: 00000000000000000000100000000001
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 12, ITERATION: 47
+# PC: 48
+# NEXT PC: 20
+# INSTRUCTION: 000000 11111 00000 00000 00000 001000
+# TYPE: JR
+# alu source 1: 00000000000000000000000000010100
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000000
+# ALUop:  111, ALUctr: 000
+# ALUsrc:  0
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 1
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  1, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 5, ITERATION: 48
+# PC: 20
+# NEXT PC: 24
+# INSTRUCTION: 010000 00010 00100 00000 00000 000000
+# TYPE: SW
+# alu source 1: 00000000000000000000000000101000
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000101000
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 1
+# memory write index: 01000
+# memory write data: 00000000000000000000100000000001
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 6, ITERATION: 49
+# PC: 24
+# NEXT PC: 28
+# INSTRUCTION: 000010 00010 00010 00000 00000 000100
+# TYPE: ADDI
+# alu source 1: 00000000000000000000000000101000
+# alu source 2: 00000000000000000000000000000100
+# alu result:  00000000000000000000000000101100
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00010
+# register write data: 00000000000000000000000000101100
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 7, ITERATION: 50
+# PC: 28
+# NEXT PC: 32
+# INSTRUCTION: 100000 00001 00110 00000 00000 000000
+# TYPE: MOVE
+# alu source 1: 00000000000000000000000000000001
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000001
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 1
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00110
+# register write data: 00000000000000000000000000000001
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 8, ITERATION: 51
+# PC: 32
+# NEXT PC: 36
+# INSTRUCTION: 000011 00110 00001 00000 00000 000001
+# TYPE: SUBI
+# alu source 1: 00000000000000000000000000000001
+# alu source 2: 00000000000000000000000000000001
+# alu result:  00000000000000000000000000000000
+# ALUop:  110, ALUctr: 110
+# ALUsrc:  1
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00001
+# register write data: 00000000000000000000000000000000
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 9, ITERATION: 52
+# PC: 36
+# NEXT PC: 8
+# INSTRUCTION: 111000 00000 00000 00000 00000 000010
+# TYPE: JUMP
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000000010
+# alu result:  00000000000000000000000000000000
+# ALUop:  000, ALUctr: 000
+# ALUsrc:  1
+# branch:  0, zero:     1
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 1, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 2, ITERATION: 53
+# PC: 8
+# NEXT PC: 40
+# INSTRUCTION: 100011 00001 00000 00000 00000 000111
+# TYPE: BEQ
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000000000
+# ALUop:  110, ALUctr: 110
+# ALUsrc:  0
+# branch:  1, zero:     1
+# is branch possible: 1
+# beq: 1, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 10, ITERATION: 54
+# PC: 40
+# NEXT PC: 52
+# INSTRUCTION: 100111 00000 00010 00000 00000 000010
+# TYPE: BNE
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000110000
+# alu result:  11111111111111111111111111010000
+# ALUop:  110, ALUctr: 110
+# ALUsrc:  0
+# branch:  1, zero:     0
+# is branch possible: 1
+# beq: 0, bne: 1
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 0
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 13, ITERATION: 55
+# PC: 52
+# NEXT PC: 56
+# INSTRUCTION: 000010 00000 00010 00000 00000 001100
+# TYPE: ADDI
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000001100
+# alu result:  00000000000000000000000000001100
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00010
+# register write data: 00000000000000000000000000001100
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 14, ITERATION: 56
+# PC: 56
+# NEXT PC: 60
+# INSTRUCTION: 001001 00010 00111 00000 00000 000000
+# TYPE: LB
+# alu source 1: 00000000000000000000000000001100
+# alu source 2: 00000000000000000000000000000000
+# alu result:  00000000000000000000000000001100
+# ALUop:  101, ALUctr: 101
+# ALUsrc:  1
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 1, memWrite: 0
+# regDst:  0, regWrite: 1
+# register write index: 00111
+# register write data: 00000000000000000000000000000000
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 15, ITERATION: 57
+# PC: 60
+# NEXT PC: 64
+# INSTRUCTION: 000000 00111 00010 00110 00000 000111
+# TYPE: SLT
+# alu source 1: 00000000000000000000000000000000
+# alu source 2: 00000000000000000000000000001100
+# alu result:  00000000000000000000000000000001
+# ALUop:  111, ALUctr: 100
+# ALUsrc:  0
+# branch:  0, zero:     0
+# is branch possible: 0
+# beq: 0, bne: 0
+# jump: 0, jal: 0, jr: 0
+# move: 0
+# memRead: 0, memWrite: 0
+# regDst:  1, regWrite: 1
+# register write index: 00110
+# register write data: 00000000000000000000000000000001
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: 16, ITERATION: 58
+# PC: 64
+# NEXT PC: x
+# INSTRUCTION: xxxxxx xxxxx xxxxx xxxxx xxxxx xxxxxx
+# alu source 1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# alu source 2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# alu result:  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ALUop:  xxx, ALUctr: xxx
+# ALUsrc:  x
+# branch:  x, zero:     x
+# is branch possible: x
+# beq: x, bne: x
+# jump: x, jal: x, jr: x
+# move: x
+# memRead: x, memWrite: x
+# regDst:  x, regWrite: x
+# ---------------------------------------------
+#  
+# INSTRUCTION INDEX: x, ITERATION: 59
+# PC: x
+# NEXT PC: x
+# INSTRUCTION: xxxxxx xxxxx xxxxx xxxxx xxxxx xxxxxx
+# alu source 1: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# alu source 2: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# alu result:  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# ALUop:  xxx, ALUctr: xxx
+# ALUsrc:  x
+# branch:  x, zero:     x
+# is branch possible: x
+# beq: x, bne: x
+# jump: x, jal: x, jr: x
+# move: x
+# memRead: x, memWrite: x
+# regDst:  x, regWrite: x
+# ---------------------------------------------
+#  
+# ** Note: $stop    : C:/Users/serdar/Desktop/mips/mips_tb.v(134)
+#    Time: 580 ps  Iteration: 0  Instance: /mips_tb
+# Break in Module mips_tb at C:/Users/serdar/Desktop/mips/mips_tb.v line 134
+# End time: 18:43:33 on Jan 19,2024, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 0

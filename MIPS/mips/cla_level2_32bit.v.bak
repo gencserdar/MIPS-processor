@@ -1,0 +1,42 @@
+module cla_level2_32bit(
+  output [31:0] sum,
+  output cout,
+  input [31:0] a,
+  input [31:0] b,
+  input cin
+);
+
+wire [3:0] p; //group p
+wire [3:0] g; //group g
+wire [3:0] c; 
+
+
+cla_level1_8bit cla1 (sum[7:0], p[0], g[0], a[7:0], b[7:0], cin);
+and and1 (cin_and_p0, cin, p[0]);
+or or1 (c[1], g[0], cin_and_p0);
+
+cla_level1_8bit cla2 (sum[15:8], p[1], g[1], a[15:8], b[15:8], c[1]); 
+and and2 (cin_and_p0_and_p1, cin_and_p0, p[1]);
+and and3 (g0_and_p1, g[0], p[1]);
+or or2(cin_and_p0_and_p1_or_g0_and_p1, g0_and_p1, cin_and_p0_and_p1);
+or or3(c[2], g[1], cin_and_p0_and_p1_or_g0_and_p1);
+
+cla_level1_8bit cla3 (sum[23:16], p[2], g[2], a[23:16], b[23:16], c[2]);
+and and4 (cin_and_p0_and_p1_and_p2, cin_and_p0_and_p1, p[2]);
+and and5 (g0_and_p1_and_p2, g0_and_p1, p[2]);
+and and6 (g1_and_p2, g[1], p[2]);
+or or4 (cin_and_p0_and_p1_and_p2_or_g0_and_p1_and_p2, g0_and_p1_and_p2, cin_and_p0_and_p1_and_p2);
+or or5 (cin_and_p0_and_p1_and_p2_or_g0_and_p1_and_p2_or_g1_and_p2, g1_and_p2, cin_and_p0_and_p1_and_p2_or_g0_and_p1_and_p2);
+or or6 (c[3], g[2], cin_and_p0_and_p1_and_p2_or_g0_and_p1_and_p2_or_g1_and_p2);
+
+cla_level1_8bit cla4 (sum[31:24], p[3], g[3], a[31:24], b[31:24], c[3]);
+and and7 (cin_and_p0_and_p1_and_p2_and_p3, cin_and_p0_and_p1_and_p2, p[3]);
+and and8 (g0_and_p1_and_p2_and_p3, g0_and_p1_and_p2, p[3]);
+and and9 (g1_and_p2_and_p3, g1_and_p2, p[3]);
+and and10 (g2_and_p3, g[2], p[3]);
+or or7 (cin_and_p0_and_p1_and_p2_and_p3_or_g0_and_p1_and_p2_and_p3, g0_and_p1_and_p2_and_p3, cin_and_p0_and_p1_and_p2_and_p3);
+or or8 (cin_and_p0_and_p1_and_p2_and_p3_or_g0_and_p1_and_p2_and_p3_or_g1_and_p2_and_p3, g1_and_p2_and_p3, cin_and_p0_and_p1_and_p2_and_p3_or_g0_and_p1_and_p2_and_p3);
+or or9 (cin_and_p0_and_p1_and_p2_and_p3_or_g0_and_p1_and_p2_and_p3_or_g1_and_p2_and_p3_or_g2_and_p3, g2_and_p3, cin_and_p0_and_p1_and_p2_and_p3_or_g0_and_p1_and_p2_and_p3_or_g1_and_p2_and_p3);
+or or10 (cout, g[3], cin_and_p0_and_p1_and_p2_and_p3_or_g0_and_p1_and_p2_and_p3_or_g1_and_p2_and_p3_or_g2_and_p3);
+
+endmodule

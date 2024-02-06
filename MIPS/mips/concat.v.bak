@@ -1,0 +1,40 @@
+module concat(
+	output res[31:0],
+	input jump_address[31:0],
+	input branch_address[31:0]
+);
+
+or or1(res[31], branch_address[31], 0);
+or or2(res[30], branch_address[30], 0);
+or or3(res[29], branch_address[29], 0);
+or or4(res[28], branch_address[28], 0);
+or or5(res[27], jump_address[27], 0);
+or or6(res[26], jump_address[26], 0);
+or or7(res[25], jump_address[25], 0);
+or or8(res[24], jump_address[24], 0);
+or or9(res[23], jump_address[23], 0);
+or or10(res[22], jump_address[22], 0);
+or or11(res[21], jump_address[21], 0);
+or or12(res[20], jump_address[20], 0);
+or or13(res[19], jump_address[19], 0);
+or or14(res[18], jump_address[18], 0);
+or or15(res[17], jump_address[17], 0);
+or or16(res[16], jump_address[16], 0);
+or or17(res[15], jump_address[15], 0);
+or or18(res[14], jump_address[14], 0);
+or or19(res[13], jump_address[13], 0);
+or or20(res[12], jump_address[12], 0);
+or or21(res[11], jump_address[11], 0);
+or or22(res[10], jump_address[10], 0);
+or or23(res[9], jump_address[9], 0);
+or or24(res[8], jump_address[8], 0);
+or or25(res[7], jump_address[7], 0);
+or or26(res[6], jump_address[6], 0);
+or or27(res[5], jump_address[5], 0);
+or or28(res[4], jump_address[4], 0);
+or or29(res[3], jump_address[3], 0);
+or or30(res[2], jump_address[2], 0);
+or or31(res[1], jump_address[1], 0);
+or or32(res[0], jump_address[0], 0);
+
+endmodule
